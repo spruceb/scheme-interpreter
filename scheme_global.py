@@ -165,14 +165,14 @@ def scheme_and(args, env):
     for i in iter(args):
         result = scheme_eval(i, env)
         if result == scheme_false:
-            return scheme_false
-    return scheme_true
+            return result
+    return result
 
 def scheme_or(args, env):
     for i in iter(args):
         result = scheme_eval(i, env)
         if result != scheme_false:
-            return scheme_true
+            return result
     return scheme_false
 
 def scheme_apply(args, env):
